@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html> 
 <html>
 <head>
 <!-- 부트스트랩 css -->
@@ -88,15 +89,91 @@
 	<section class="breadCrumb">
 		<nav aria-label="breadcrumb">
 		  <ol class="breadcrumb">
-		    <li class="breadcrumb-item active" aria-current="page">Home</li>
+			<li class="breadcrumb-item"><a href="#">Home</a></li>
+		    <li class="breadcrumb-item"><a href="serviceCenter.do" style="text-decoration : none;">고객센터</a></li>
+		    <li class="breadcrumb-item active" aria-current="page">1대1 문의/확인</li>
 		  </ol>
 		</nav>
 	</section>
 	<!-- Bread Crumb End -->
 	
-	<!-- 여기부터 넣으시면 됩니다 Start -->
-	
-	<!-- End -->
+	<!-- table Start -->
+	<div align="center">
+		<h1>고객센터</h1><br><br>
+		<h3>1:1 문의</h3>
+		<div class="row" style="margin-top: 5rem; margin-bottom:5rem;">
+			<div class="d-grid gap-5 d-md-flex justify-content-md-center">
+				<a href="serviceCenter.do" style="text-decoration : none;"><button class="btn btn-secondary btn-lg" type="button">공지사항</button></a>
+				<a href="serviceCenter1vs1.do" style="text-decoration : none;"><button class="btn btn-secondary btn-lg" type="button">1:1 문의/확인</button></a>
+			</div>
+		</div>
+	</div>
+	<section class ="bbs">
+		<div class ="container">
+			<div class="row">
+			<table class="table table-hover table-striped">
+				  <thead>
+				    <tr>
+				      <th scope="col">번호</th>
+				      <th scope="col">작성자</th>
+				      <th scope="col">제목</th>
+				      <th scope="col">내용</th>
+				      <th scope="col">등록날짜</th>
+				      <th scope="col">상태</th>
+				      <th scope="col">조회수</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				  	<c:forEach items="${Inquire}" var="dto">
+				    <tr>
+				      <th scope="row">${dto.iCode }</th>
+				      <td>Mark</td>
+				      <td><a href="bbsDetail.jsp" class="bbsTitle">${dto.iTitle }</a></td>
+				      <td>${dto.iContent }</td>
+				      <td>${dto.iDate }</td>
+				      <td>${dto.iReply }</td>
+				      <td>${dto.iViews }</td>
+				    </tr>
+				    </c:forEach>
+				  </tbody>
+				</table>
+				
+				<div class="row" style="margin-top: 1rem;">
+					<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+					<a href="serviceCenterWrite.do" style="text-decoration : none;"><button class="btn btn-secondary" type="button">글작성</button></a>
+					</div>
+				</div>
+				
+				<div class="row" style="margin-top: 5rem; marign-bottom : 5rem;">
+					<nav aria-label="Page navigation example">
+					  <ul class="pagination justify-content-center">
+					    <li class="page-item">
+					      <a class="page-link" href="#" aria-label="Previous">
+					        <span aria-hidden="true">&laquo;</span>
+					      </a>
+					    </li>
+					    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+					    <li class="page-item"><a class="page-link" href="#">2</a></li>
+					    <li class="page-item"><a class="page-link" href="#">3</a></li>
+					    <li class="page-item"><a class="page-link" href="#">4</a></li>
+					    <li class="page-item"><a class="page-link" href="#">5</a></li>
+					    <li class="page-item"><a class="page-link" href="#">6</a></li>
+					    <li class="page-item"><a class="page-link" href="#">7</a></li>
+					    <li class="page-item"><a class="page-link" href="#">8</a></li>
+					    <li class="page-item"><a class="page-link" href="#">9</a></li>
+					    <li class="page-item"><a class="page-link" href="#">10</a></li>
+					    <li class="page-item">
+					      <a class="page-link" href="#" aria-label="Next">
+					        <span aria-hidden="true">&raquo;</span>
+					      </a>
+					    </li>
+					  </ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- table End -->
 	
 	<!-- Footer start -->
 	<footer >

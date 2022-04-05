@@ -84,18 +84,153 @@
 	</header>
 	<!-- Header End -->
 	
-	<!-- Bread Crumb Start -->
+	<!-- 여기부터 넣으시면 됩니다 Start -->
+		<!-- Bread Crumb Start -->
 	<section class="breadCrumb">
 		<nav aria-label="breadcrumb">
 		  <ol class="breadcrumb">
-		    <li class="breadcrumb-item active" aria-current="page">Home</li>
+		    <li class="breadcrumb-item"><a href="#">Home</a></li>
+		    <li class="breadcrumb-item"><a href="serviceCenter.do" style="text-decoration : none;">고객센터</a></li>
+		    <li class="breadcrumb-item"><a href="serviceCenter1vs1.do" style="text-decoration : none;">1대1 문의/확인</a></li>
+		    <li class="breadcrumb-item active" aria-current="page">글작성</li>
 		  </ol>
 		</nav>
 	</section>
 	<!-- Bread Crumb End -->
 	
-	<!-- 여기부터 넣으시면 됩니다 Start -->
+	<div align="center">
+		<h1>고객센터</h1><br><br>
+		<h3>1:1 문의 글작성</h3>
+		<div class="row" style="margin-top: 5rem; margin-bottom:5rem;">
+			<div class="d-grid gap-5 d-md-flex justify-content-md-center">
+				<a href="serviceCenter.do" style="text-decoration : none;"><button class="btn btn-secondary btn-lg" type="button">공지사항</button></a>
+				<a href="serviceCenter1vs1.do" style="text-decoration : none;"><button class="btn btn-secondary btn-lg" type="button">1:1 문의/확인</button></a>
+			</div>
+		</div>
+	</div>
 	
+	<!-- table Start -->
+		<div class ="container mb-5">
+			<div class="row justify-content-md-center">
+				<div class="col col-lg-7 ">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="flush-headingOne">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+								        <span>개인정보 수집·이용에 관한 사항</span><span>보기</span>
+							</button>
+						</h2>
+						<div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">
+							<p>[1:1문의 정보수집 동의]</p>
+								1:1문의를 위해 다음의 개인정보 수집 이용에 동의 후 원활한 서비스 이용이 가능 합니다.
+							<p>1. 개인정보 수집 항목</p>
+								성명, 전화번호, 휴대폰번호, 이메일주소
+							<p>2. 개인정보 수집 목적</p>
+								고객문의, 접수, 처리결과 안내
+							<p>3. 개인정보 보유 이용 기간</p>
+								원칙적으로, 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다.
+								단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 아래와 같이 관계법령에서 정한 일정
+								기간 동안 개인정보를 보관할 수 있습니다.
+							</div>
+						</div>
+						<div align="right">
+							<input id="agree1" type="checkbox" value="" name="#">
+						</div>
+			  		</div>
+				</div>
+			</div>
+		</div>
+<form>
+	<div class="container mb-6">
+		<div class="row justify-content-md-center">
+		    <div class="col col-lg-6 ">
+		      	<div>
+		      		<table>
+		      			<tr>
+		      				<td>문의구분 : </td>
+		      				<td>
+		      					<select name="email03" id="email03" onchange="javascript:changed();" style='min-height:24px;'>
+									<option>선택</option>
+									<option value="productInquiry" >상품문의</option>
+									<option value="deliveryInquiry">배송문의</option>
+									<option value="orderInquiry">주문문의</option>
+									<option value="asInquiry">A/S문의</option>
+									<option value="otherInquiry">기타문의</option>
+								</select>
+		      				</td>
+		      			</tr>
+		      			<tr>
+		      				<td>작성자 : </td>
+		      				<td>
+		      				<input type="text" value="" size="40">
+		      				</td>
+		      			</tr>	
+		      			<tr>
+		      				<td>이메일 : </td>
+		      				<td>
+		      					<input type="text" name="email01" id="email01" class="input t02" title="이메일아이디" value="" /> @ <input type="text" name="email02" id="email02" class="input t03" title="이메일주소" value="" readonly>
+								<select name="email03" id="email03" onchange="javascript:changed();" style='min-height:24px;'>
+									<option value="">선택</option>
+									<option value="naver.com">naver.com</option>
+									<option value="daum.net">daum.net</option>
+									<option value="hanmail.net">hanmail.net</option>
+									<option value="gmail.com">gmail.com</option>
+									<option value="nate.com">nate.com</option>
+									<option value="write">직접입력</option>
+								</select>
+							</td>
+		      			</tr>
+		      			<tr>
+		      				<td>연락처 : </td>
+		      				<td>
+		      					<input type="text" name="tel01" id="tel01" maxlength="3" class="input t04" title="전화번호 앞자리" onkeypress="return onlyNumber()" onblur="preventChar(this)" value="" />
+		      				 - <input type="tel" name="tel02" id="tel02" maxlength="4" class="input t04" title="전화번호 중간자리" onkeypress="return onlyNumber()" onblur="preventChar(this)" value="" />
+		      				 - <input type="tel" name="tel03" id="tel03" maxlength="4" class="input t04" title="전화번호 뒷자리" onkeypress="return onlyNumber()" onblur="preventChar(this)" value="" />
+		      				 </td>
+		      			</tr>
+		      			<tr>
+		      				<td>문의제목 : </td>
+		      				<td><input name="title" type="text" style="width:500px;"></td>
+		      			</tr>
+		      			<tr>
+		      				<td>문의내용 : </td>
+		      				<td><textarea name="content" id="content" title="내용" style="width:500px; height:300px; " ></textarea></td>
+		      			</tr>
+		      		</table>
+				</div>
+		    </div>
+		    
+		    <div class="col col-lg-1">
+			    <div class="d-flex" style="height: 600px;">
+	 				 <div class="vr"></div>
+				</div>
+		    </div>
+		    <div class="col col-lg-3">
+		      <div>
+					<p class="text01">고객 여러분께 알려드립니다.</p>
+					<p>
+						콜센터로의 전화문의는 문의가 집중되는 오전 10시~오후 2시 시간대를 가급적 피해주시고, 번거로우시더라도 [1:1문의]를 활용해 주시면 고객님의 요청사항을 보다 정확하게 확인하여 신속하게 해결해 드리도록 하겠습니다.<br><br>
+						* 상품에 문제가 있을시 사진과 함께 남겨주시면 보다 빠른확인이 가능합니다. 
+					</p>
+					<p class="text01">1:1문의 운영일/시간</p>
+					<p>평일: 오전 10시~12시/오후 1시~6시 | 토, 일요일, 공휴일 휴무</p>
+					<p class="text02">
+						개인정보보호법 제21조에 따라 비회원 또는 타 쇼핑몰 주문 건에 대한 고객 정보는 주문 완료 시 파기됩니다.<br>
+						AS/반품 등 상품 수령 후 문의에 대해서 주문 검색에 다소 제약이 있으니 이점 양해 바랍니다.
+					</p>
+				</div>
+		    </div>
+		</div>
+		<div>
+			<div class="row justify-content-md-center mt-5">
+			   <div class="col col-lg-2">
+			      <input class="btn btn-dark btn-lg" type="submit" value="문의하다">
+			   </div>
+			</div>
+		</div>
+ 	</div>
+</form>		
+	<!-- table End -->
 	<!-- End -->
 	
 	<!-- Footer start -->

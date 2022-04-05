@@ -88,14 +88,131 @@
 	<section class="breadCrumb">
 		<nav aria-label="breadcrumb">
 		  <ol class="breadcrumb">
-		    <li class="breadcrumb-item active" aria-current="page">Home</li>
+		  	<li class="breadcrumb-item"><a href="#">Home</a></li>
+		    <li class="breadcrumb-item active" aria-current="page">고객센터</li>
+		    <li class="breadcrumb-item active" aria-current="page">공지사항</li>
 		  </ol>
 		</nav>
 	</section>
 	<!-- Bread Crumb End -->
 	
 	<!-- 여기부터 넣으시면 됩니다 Start -->
-	
+	<div align="center">
+		<h1>고객센터</h1><br><br>
+		<h3>공지사항</h3>
+		<div class="row" style="margin-top: 5rem; margin-bottom:5rem;">
+			<div class="d-grid gap-5 d-md-flex justify-content-md-center">
+				<a href="serviceCenter.do" style="text-decoration : none;"><button class="btn btn-secondary btn-lg" type="button">공지사항</button></a>
+				<a href="serviceCenter1vs1.do" style="text-decoration : none;"><button class="btn btn-secondary btn-lg" type="button">1:1 문의/확인</button></a>
+			</div>
+		</div>
+	</div>
+		<!-- table Start -->
+		<section class ="bbs">
+		<div class ="container">
+			<div class="row">
+			<table class="table table-hover table-striped">
+				  <thead>
+				    <tr>
+				      <th scope="col">번호</th>
+				      <th scope="col">문의 구분</th>
+				      <th scope="col">제목</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td colspan="3">
+					      <div class="accordion-item">
+						    <h2 class="accordion-header" id="flush-headingOne">
+						      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+						        1 | 취소/교환/환불 | 취소나 반품으로 인한 결제취소는 어떻게 되나요? 
+						      </button>
+						    </h2>
+							    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+							      <div class="accordion-body">
+							      	신용카드 : 배송 전 취소나 반품으로 인한 주문취소 시 카드 매출 취소는 즉시 접수되지만, 카드사 매입 취소까지 보통 3~7일 정도 소요될 수 있습니다.<br>
+									각 카드사마다 취소 처리 기간이 다르기 때문에 카드사를 통하여 확인할 수 있습니다.<br>
+									만약 대금이 결제되었다 하더라도 해당 금액만큼 해당 카드사에서 다음 달 청구 결제 대금에서 제외됩니다.<br>
+									무통장입금 / 실시간 계좌이체 : 취소 환불 요청 후 요청하신 계좌로 입금됩니다.<br>
+									(4시 이전 접수건은 당일, 4시 이후 접수건은 익일 입금 예정)
+							      </div>
+							    </div>
+	  						</div>
+  						</td>
+				    </tr>
+				    <tr>
+				      <td colspan="3">
+					      <div class="accordion-item">
+						    <h2 class="accordion-header" id="flush-headingTwo">
+						      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+						        2 | 취소/교환/환불 | 받은 상품의 교환, 반품이 가능한가요?
+						      </button>
+						    </h2>
+							    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+							      <div class="accordion-body">
+							      	상품을 수령하신 후 7일 이내에 교환, 반품이 가능합니다.<br>
+									제품에 하자가 있을 경우, 교환, 반품 배송비는 두닷이 부담합니다.<br>
+									고객님의 변심에 의한 교환, 반품일 경우, 교환 시 추가되는 배송비 또는 반품 배송비는 고객 부담입니다.<br>
+									그러나 상품을 개봉했거나 설치한 후에는 상품의 재판매가 불가능하므로 고객 변심에 의한 교환, 반품이 불가능합니다.
+							      </div>
+							    </div>
+	  						</div>
+  						</td>
+				    </tr>
+				    <tr>
+				      <td colspan="3">
+					      <div class="accordion-item">
+						    <h2 class="accordion-header" id="flush-headingThree">
+						      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+						        3 | 취소/교환/환불 | 주문취소는 어떻게 하나요?
+						      </button>
+						    </h2>
+							    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+							      <div class="accordion-body">
+							      	먼저 주문하신 상품의 배송 정보를 확인 부탁드립니다.<br>
+									상품 발송 전인 경우,[1:1 문의 게시판 - 주문 문의]로 접수해주시면, 취소 처리해 드리겠습니다.<br>
+									상품이 발송된 경우 주문취소는 바로 어렵습니다,<br>
+									상품을 수령하신 후 반품 처리하여야 하며, 반품비용이 발생됩니다.<br>
+									단, 주문 제작 상품일 경우 제작 중 취소는 불가능합니다.
+							      </div>
+							    </div>
+	  						</div>
+  						</td>
+				    </tr>
+				   
+				  </tbody>
+			</table>
+				
+				<div class="row" style="margin-top: 5rem; marign-bottom : 5rem;">
+					<nav aria-label="Page navigation example">
+					  <ul class="pagination justify-content-center">
+					    <li class="page-item">
+					      <a class="page-link" href="#" aria-label="Previous">
+					        <span aria-hidden="true">&laquo;</span>
+					      </a>
+					    </li>
+					    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+					    <li class="page-item"><a class="page-link" href="#">2</a></li>
+					    <li class="page-item"><a class="page-link" href="#">3</a></li>
+					    <li class="page-item"><a class="page-link" href="#">4</a></li>
+					    <li class="page-item"><a class="page-link" href="#">5</a></li>
+					    <li class="page-item"><a class="page-link" href="#">6</a></li>
+					    <li class="page-item"><a class="page-link" href="#">7</a></li>
+					    <li class="page-item"><a class="page-link" href="#">8</a></li>
+					    <li class="page-item"><a class="page-link" href="#">9</a></li>
+					    <li class="page-item"><a class="page-link" href="#">10</a></li>
+					    <li class="page-item">
+					      <a class="page-link" href="#" aria-label="Next">
+					        <span aria-hidden="true">&raquo;</span>
+					      </a>
+					    </li>
+					  </ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--  table End -->
 	<!-- End -->
 	
 	<!-- Footer start -->
