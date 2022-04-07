@@ -115,24 +115,24 @@
 				  <thead>
 				    <tr>
 				      <th scope="col">번호</th>
+				      <th scope="col">문의구분</th>
 				      <th scope="col">작성자</th>
 				      <th scope="col">제목</th>
 				      <th scope="col">내용</th>
 				      <th scope="col">등록날짜</th>
-				      <th scope="col">상태</th>
-				      <th scope="col">조회수</th>
+				      <th scope="col">답변여부</th>
 				    </tr>
 				  </thead>
 				  <tbody>
 				  	<c:forEach items="${Inquire}" var="dto">
 				    <tr>
-				      <th scope="row">${dto.iCode }</th>
-				      <td>Mark</td>
-				      <td><a href="bbsDetail.jsp" class="bbsTitle">${dto.iTitle }</a></td>
+				      <th scope="row"><a href="serviceCenter1vs1Detail.do?iNum=${dto.iNum }" class="bbsTitle">${dto.iNum }</a></th>
+				      <td>${dto.iCode }</td>
+				      <td>${dto.user_uId }</td>
+				      <td>${dto.iTitle }</td>
 				      <td>${dto.iContent }</td>
 				      <td>${dto.iDate }</td>
 				      <td>${dto.iReply }</td>
-				      <td>${dto.iViews }</td>
 				    </tr>
 				    </c:forEach>
 				  </tbody>
@@ -157,11 +157,6 @@
 					    <li class="page-item"><a class="page-link" href="#">3</a></li>
 					    <li class="page-item"><a class="page-link" href="#">4</a></li>
 					    <li class="page-item"><a class="page-link" href="#">5</a></li>
-					    <li class="page-item"><a class="page-link" href="#">6</a></li>
-					    <li class="page-item"><a class="page-link" href="#">7</a></li>
-					    <li class="page-item"><a class="page-link" href="#">8</a></li>
-					    <li class="page-item"><a class="page-link" href="#">9</a></li>
-					    <li class="page-item"><a class="page-link" href="#">10</a></li>
 					    <li class="page-item">
 					      <a class="page-link" href="#" aria-label="Next">
 					        <span aria-hidden="true">&raquo;</span>

@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.javalec.team.command.PCommand;
+import com.javalec.team.command.ServiceCenter1vs1Detail_Command;
 import com.javalec.team.command.ServiceCenter1vs1_Command;
 
 /**
@@ -57,22 +58,7 @@ public class homecontroller extends HttpServlet {
 //		System.out.println(conPath);
 //		System.out.println(com);
 		
-		switch(com) {
-		case("/serviceCenter.do"): // /list.do -> 전체 내용 보여주기
-			viewPage = "serviceCenter.jsp";
-			break;
-		
-		case("/serviceCenter1vs1.do"): // 1:1 문의로 가기
-			command = new ServiceCenter1vs1_Command();
-			command.execute(request, response);
-			viewPage = "serviceCenter1vs1.jsp";
-			break;
-			
-		case("/serviceCenterWrite.do"): // 글작성
-			viewPage = "serviceCenterWrite.jsp";
-			break;
-		
-		} // switch(com)
+
 		
 
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);

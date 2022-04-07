@@ -140,7 +140,7 @@
 				</div>
 			</div>
 		</div>
-<form>
+<form action="serviceCenterWriteFinish.do" method="get">
 	<div class="container mb-6">
 		<div class="row justify-content-md-center">
 		    <div class="col col-lg-6 ">
@@ -149,52 +149,34 @@
 		      			<tr>
 		      				<td>문의구분 : </td>
 		      				<td>
-		      					<select name="email03" id="email03" onchange="javascript:changed();" style='min-height:24px;'>
-									<option>선택</option>
-									<option value="productInquiry" >상품문의</option>
-									<option value="deliveryInquiry">배송문의</option>
-									<option value="orderInquiry">주문문의</option>
-									<option value="asInquiry">A/S문의</option>
-									<option value="otherInquiry">기타문의</option>
+		      					<select name="iCode" id="email03" onchange="javascript:changed();" style='min-height:24px;'>
+									<option value="상품문의">상품문의</option>
+									<option value="배송문의">배송문의</option>
+									<option value="주문문의">주문문의</option>
+									<option value="A/S문의">A/S문의</option>
+									<option value="기타문의">기타문의</option>
 								</select>
 		      				</td>
 		      			</tr>
 		      			<tr>
 		      				<td>작성자 : </td>
 		      				<td>
-		      				<input type="text" value="" size="40">
+		      				<input type="text" name="user_uId" value="" size="62">
 		      				</td>
 		      			</tr>	
 		      			<tr>
 		      				<td>이메일 : </td>
 		      				<td>
-		      					<input type="text" name="email01" id="email01" class="input t02" title="이메일아이디" value="" /> @ <input type="text" name="email02" id="email02" class="input t03" title="이메일주소" value="" readonly>
-								<select name="email03" id="email03" onchange="javascript:changed();" style='min-height:24px;'>
-									<option value="">선택</option>
-									<option value="naver.com">naver.com</option>
-									<option value="daum.net">daum.net</option>
-									<option value="hanmail.net">hanmail.net</option>
-									<option value="gmail.com">gmail.com</option>
-									<option value="nate.com">nate.com</option>
-									<option value="write">직접입력</option>
-								</select>
+		      					<input type="text" name="user_uEmail" size="62" value="" />
 							</td>
 		      			</tr>
 		      			<tr>
-		      				<td>연락처 : </td>
-		      				<td>
-		      					<input type="text" name="tel01" id="tel01" maxlength="3" class="input t04" title="전화번호 앞자리" onkeypress="return onlyNumber()" onblur="preventChar(this)" value="" />
-		      				 - <input type="tel" name="tel02" id="tel02" maxlength="4" class="input t04" title="전화번호 중간자리" onkeypress="return onlyNumber()" onblur="preventChar(this)" value="" />
-		      				 - <input type="tel" name="tel03" id="tel03" maxlength="4" class="input t04" title="전화번호 뒷자리" onkeypress="return onlyNumber()" onblur="preventChar(this)" value="" />
-		      				 </td>
-		      			</tr>
-		      			<tr>
 		      				<td>문의제목 : </td>
-		      				<td><input name="title" type="text" style="width:500px;"></td>
+		      				<td><input name="iTitle" type="text" style="width:500px;"></td>
 		      			</tr>
 		      			<tr>
 		      				<td>문의내용 : </td>
-		      				<td><textarea name="content" id="content" title="내용" style="width:500px; height:300px; " ></textarea></td>
+		      				<td><textarea name="iContent" id="content" title="내용" style="width:500px; height:300px;"></textarea></td>
 		      			</tr>
 		      		</table>
 				</div>

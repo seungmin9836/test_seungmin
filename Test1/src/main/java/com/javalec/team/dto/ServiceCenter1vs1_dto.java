@@ -3,35 +3,53 @@ package com.javalec.team.dto;
 import java.sql.Timestamp;
 
 public class ServiceCenter1vs1_dto {
-
-	int iCode;
+	
+	int iNum;
+	String iCode;
+	String user_uId;
 	String iTitle;
 	String iContent;
 	Timestamp iDate;
 	String iReply;
-	int iViews;
 	
 	public ServiceCenter1vs1_dto() {
 		
 	}
 
-	public ServiceCenter1vs1_dto(int iCode, String iTitle, String iContent, Timestamp iDate, String iReply,
-			int iViews) {
+	public ServiceCenter1vs1_dto(int iNum, String iCode, String user_uId, String iTitle, String iContent,
+			Timestamp iDate, String iReply) {
 		super();
+		this.iNum = iNum;
 		this.iCode = iCode;
+		this.user_uId = user_uId;
 		this.iTitle = iTitle;
 		this.iContent = iContent;
 		this.iDate = iDate;
 		this.iReply = iReply;
-		this.iViews = iViews;
 	}
 
-	public int getiCode() {
+	public int getiNum() {
+		return iNum;
+	}
+
+	public void setiNum(int iNum) {
+		this.iNum = iNum;
+	}
+
+	public String getiCode() {
 		return iCode;
 	}
 
-	public void setiCode(int iCode) {
+	public void setiCode(String iCode) {
 		this.iCode = iCode;
+	}
+
+	public String getUser_uId() {
+		return user_uId;
+	}
+
+	public void setUser_uId(String user_uId) {
+		this.user_uId = user_uId;
 	}
 
 	public String getiTitle() {
@@ -66,12 +84,5 @@ public class ServiceCenter1vs1_dto {
 		this.iReply = iReply;
 	}
 
-	public int getiViews() {
-		return iViews;
-	}
-
-	public void setiViews(int iViews) {
-		this.iViews = iViews;
-	}
 	
 }

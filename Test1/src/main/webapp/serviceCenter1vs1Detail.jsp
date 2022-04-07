@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -95,8 +96,65 @@
 	<!-- Bread Crumb End -->
 	
 	<!-- 여기부터 넣으시면 됩니다 Start -->
-	
-	<!-- End -->
+
+	<div class="container mb-6">
+		<div class="row justify-content-md-center">
+		    <div class="col col-lg-7 ">
+		      		<table>
+		      		<c:forEach items="${Content}" var="con">
+		      			<tr>
+		      				<td>문의번호 : </td>
+		      				<td>${con.iNum }</td>
+		      			</tr>
+		      			<tr>
+		      				<td>문의구분 : </td>
+		      				<td>${con.iCode }</td>
+		      			</tr>
+		      			<tr>
+		      				<td>작성자 : </td>
+		      				<td>${con.user_uId }</td>
+		      			</tr>	
+		      			<tr>
+		      				<td>이메일 : </td>
+		      				<td>${con.user_uEmail }</td>
+		      			</tr>
+		      			<tr>
+		      				<td>문의제목 : </td>
+		      				<td>${con.iTitle }</td>
+		      			</tr>
+		      			<tr>
+		      				<td>문의내용 : </td>
+		      				<td>${con.iContent }</td>
+		      			</tr>
+		      			<tr>
+		      				<td>문의날짜 : </td>
+		      				<td>${con.iDate }</td>
+		      			</tr>
+		      			<tr>
+		      				<td>답변여부 : </td>
+		      				<td>${con.iReply }</td>
+		      			</tr>
+		      			<tr>
+		      				<td>답변날짜 : </td>
+		      				<td>${con.iReDate }</td>
+		      			</tr>
+		      			<tr>
+		      				<td>답변내용 : </td>
+		      				<td>${con.iReContent }</td>
+		      			</tr>
+		      			</c:forEach>
+		      		</table>
+		    </div>
+		</div>
+		<div>
+			<div class="row justify-content-md-center mt-5">
+			   <div class="col col-lg-2">
+			      <a href="serviceCenter1vs1.do"><input class="btn btn-dark btn-sm" type="button" value="목록으로 가기"></a>
+			   </div>
+			</div>
+		</div>
+ 	</div>
+
 	
 	<!-- Footer start -->
 	<footer >
