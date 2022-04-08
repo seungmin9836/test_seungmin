@@ -24,6 +24,9 @@
 .golist{
 padding : 0 0 50px 0;
 }
+#detaillist{
+padding : 15px 0 15px 0;
+}
 </style>
 <title>홈페이지</title>
 
@@ -109,48 +112,48 @@ padding : 0 0 50px 0;
 		      		<table class="table table-bordered align-middle" style="text-align:center">
 		      		 <thead>
 			      		 <tr>
-			      		 <td><h4>구분</h4></td>
-			      		 <td><h4>내용</h4></td>
+			      		 <td class="table-secondary"><h4>구분</h4></td>
+			      		 <td class="table-secondary"><h4>내용</h4></td>
   					 </thead>
  					 <tbody>
 		      			<tr>
-		      				<th scope="col" class="table-secondary">문의번호 : </th>
+		      				<th scope="col" id="detaillist" class="table-light">문의번호 : </th>
 		      				<td>${con.iNum }</td>
 		      			</tr>
 		      			<tr>
-		      				<th scope="col" class="table-secondary">문의구분 : </th>
+		      				<th scope="col" id="detaillist" class="table-light">문의구분 : </th>
 		      				<td>${con.iCode }</td>
 		      			</tr>
 		      			<tr>
-		      				<th scope="col" class="table-secondary">작성자 : </th>
+		      				<th scope="col" id="detaillist" class="table-light">작성자 : </th>
 		      				<td>${con.user_uId }</td>
 		      			</tr>	
 		      			<tr>
-		      				<th scope="col" class="table-secondary">이메일 : </th>
+		      				<th scope="col" id="detaillist" class="table-light">이메일 : </th>
 		      				<td>${con.user_uEmail }</td>
 		      			</tr>
 		      			<tr>
-		      				<th scope="col" class="table-secondary">문의제목 : </th>
+		      				<th scope="col" id="detaillist" class="table-light">문의제목 : </th>
 		      				<td>${con.iTitle }</td>
 		      			</tr>
 		      			<tr>
-		      				<th scope="col" class="table-secondary">문의내용 : </th>
+		      				<th scope="col" id="detaillist" class="table-light">문의내용 : </th>
 		      				<td>${con.iContent }</td>
 		      			</tr>
 		      			<tr>
-		      				<th scope="col" class="table-secondary">문의날짜 : </th>
+		      				<th scope="col" id="detaillist" class="table-light">문의날짜 : </th>
 		      				<td>${con.iDate }</td>
 		      			</tr>
 		      			<tr>
-		      				<th scope="col" class="table-secondary">답변여부 : </th>
+		      				<th scope="col" id="detaillist" class="table-light">답변여부 : </th>
 		      				<td>${con.iReply }</td>
 		      			</tr>
 		      			<tr>
-		      				<th scope="col" class="table-secondary">답변날짜 : </th>
+		      				<th scope="col" id="detaillist" class="table-light">답변날짜 : </th>
 		      				<td>${con.iReDate }</td>
 		      			</tr>
 		      			<tr>
-		      				<th scope="col" class="table-secondary">답변내용 : </th>
+		      				<th scope="col" id="detaillist" class="table-light">답변내용 : </th>
 		      				<td>${con.iReContent }</td>
 		      			</tr>
 		      			</tbody>
@@ -161,7 +164,7 @@ padding : 0 0 50px 0;
 		<div class="golist" >
 			<div class="row justify-content-md-center mt-5">
 			   <div class="col col-lg-2">
-			      <a href="serviceCenter1vs1.do"><input class="btn btn-dark btn-sm" type="button" value="목록으로 가기"></a>
+			      <a href="serviceCenter1vs1.do"><input class="btn btn-dark btn-mb" type="button" value="목록으로 가기"></a>
 			   </div>
 			</div>
 		</div>
